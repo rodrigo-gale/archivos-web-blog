@@ -1,0 +1,336 @@
+
+  @media  screen and (min-width: 300px) {
+ 
+/*  @media (800px <= width <= 1280px){
+ */
+ 
+*{
+    margin:0;
+    padding: 0;
+}
+
+body{
+    background-color: #080000;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    box-sizing: border-box;
+}
+
+.div-container-web{
+
+  display:grid;
+  grid-template-areas:'header header header header header header'  'nav nav  right right' 
+  'footer footer footer footer footer';  
+ gap: 10px;
+ padding: 30px;
+                      
+}
+.div-container-web > div{
+ text-align: center;
+  padding: 40px 0;
+  font-size: 30px;
+  
+  }
+  
+
+header{
+background-image:url( ../imagenes-blog/fondo\ de\ pantalla.jpg);
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 100px 20%;
+
+}
+/* estilo de la foto */
+.imag-picture{
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 3px solid rgb(11, 5, 5);
+  text-align: center;
+  }
+/* finaliza estilo de la foto */
+
+
+/* aqui empieza el nav y lo hare con flex box*/
+nav ul{
+  width: 60%;/* con esta propiedad hago que ocupen mas o menos el espacio en la pantalla */
+  margin: 0 auto;/* con esta propiedad lo he centrado */
+ 
+}
+nav ul{
+padding:0;
+list-style: none;
+display: flex;
+justify-content: space-between;
+padding: 35px 0;/* para separar el nav de la parte de arriba */
+}
+nav ul li{
+  position: relative;
+ 
+}
+nav ul li a{
+  padding:10px;
+  background-color: #0c0000;
+  color:#cbe3ed;
+  text-decoration: none;
+  font-size: 20px;
+  box-shadow: 3px  3px red, -1em 0.4em olivedrab;
+
+}
+nav ul li a:hover{
+  background-color: rgb(240, 19, 19);
+  border-radius: 20px;
+  transition: 0.4s ease-in;
+ 
+}
+
+nav ul li::before{/* con estas propiedades estoy poniendo el efecto de la linea en el los enlaces */
+  content:"";
+  height: 5px;
+  width: 10%;/* esto hace que se vea o no la linea */
+  background-color: #fffffe;
+  position: absolute;
+  /* con estas propiedades hago que la lina se ponga debajo */
+  left:0;
+  bottom: -11px;
+  /* aqui le aplico animacion */
+  transition: 0.4s ease-out;
+ 
+} 
+nav ul li:hover::before{
+  width: 70%;/* junto con esta propiedad, la linea se vera o no, cuando pase el mousse */
+
+}
+  
+/* aqui termina el nav */
+
+
+/* aqui empieza el estilo del titulo de descarga de archivo */
+
+.title-download{
+  position: static;
+  text-align: center;
+  font-family: cursive;
+  box-shadow:  rgb(122, 122, 8) 3px 0 10px;
+  
+}
+
+.div-button-donwnload a{
+text-decoration: none;
+font-size: 1.8em;
+color: #0c0000;
+font-weight: bolder;
+}
+.title-download, .div-button-donwnload, .ancor-document-download{
+  margin: 20px;
+
+}
+.ancor-document-download{
+  background-color: rgb(122, 122, 8);
+}
+.ancor-document-download:hover{
+color:#cbe3ed;
+}
+
+/* aqui termina el estilo del titulo */
+
+.div-about-me-with-text{
+  background-image: url(../imagenes-blog/1920-moderno-telefono-negocio-smartphone-tecnologia-y-moderno-comunicacion-tecnologia-concepto-3d-render.jpg);
+  padding: 15%;
+  background-repeat: no-repeat;
+}
+
+/* aqui empieza el about me */
+.div-about-me-with-text{
+  text-overflow: ellipsis;
+  text-align: center;
+  color: aliceblue;
+  letter-spacing: 5px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.h3-about-me-title{
+font-size: 50px  ;
+font-weight: bold;
+text-shadow: hsl(0, 100%, 2%) 5px 0px;
+
+}
+.h3-about-me-title:hover{
+color:olive;
+}
+
+.about-me-text{
+ 
+  font-size: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  text-shadow: #0c0000 5px 0px;
+}
+.about-me-text:hover{
+background-color:rgb(48, 71, 2);
+}
+
+/*aqui termina el about me  */
+
+/* aqui empieza el estilo de los estudios */
+.div-container-education{
+  content: hidden;
+  display:grid;
+  margin:20px auto;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+
+}
+.div-education-title{
+  font-size: 50px;
+}
+.div-education-title:hover{
+color:olive;
+}
+
+.div-container-education p{
+  font-size: 10px;
+  font-weight: 60px;
+  margin: 20px auto;
+  font-weight: bold;
+}
+.div-container-education p:hover{
+font-size: 33px;
+font-weight: bolder;
+text-decoration: underline;
+color:olive;
+transition: 3s all;
+}
+/* aqui termina el estilo de los estudios */
+
+
+
+/* aqui empieza el estilo de las habilidades */
+ 
+.title-skills{
+  font-size: 30px;
+  color:olive;
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.div-skills-container{
+  display:flex;
+}
+
+/* aqui empieza el slider */
+
+.slider-wrapper{
+  position:relative;
+  max-width: 100px;
+  margin:  30px auto;
+
+}
+
+.slider{
+  display: flex;
+  width:  100px;
+  aspect-ratio: 9.9 / 11;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 0.3rem .20rem  #11101026;
+/*   border-radius: .5rem; */
+  
+}
+.slider img{
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit:  cover;
+}
+.slider-nav{
+  display:flex;
+  column-gap: 1rem;
+  position: absolute;
+  bottom: -2rem;
+  left: 60%;
+  transform: translateX(-50%);
+  z-index: 1;
+
+}
+.slider-nav a{
+  width: .8rem;
+  height: .8rem;
+  border-radius: 50%;
+  background-color: rgb(240, 240, 220);
+  opacity: .20;
+  transition: opacity ease 250ms;
+  
+
+}
+/* .slider-nav a:hover{
+  opacity: 100%;
+
+} */
+/* aqui termina el slider */
+
+
+/* aqui empieza el estilo de el logo mqb */
+.div-title-porfolio{
+  text-align: center;
+  margin: 50px auto;
+  color:olive;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 30px;
+  letter-spacing: 3px;
+}
+
+.div-title-porfolio:hover{
+  border-bottom: 6px solid olive;
+  width: 50%; 
+  transition: 0.5s;
+  
+}
+.porfolio-works{
+  text-align: center;
+}
+.porfolio-works img{
+  width: 300px ;
+  height: 300px ;
+  border-radius: 10%;
+  border: 3px solid olive;
+  margin-bottom: 30px;
+}
+/* aqui empieza el footer */
+
+.div-footer footer{
+background-color: olive;
+display: flex;
+column-gap: auto auto auto ;
+
+
+}
+.div-footer, .div-watsap, .div-email, .div-copy-right{
+ margin: 50px auto;
+
+}
+
+.div-email:hover{
+border: 3px solid #080000;
+}
+
+.div-footer, .div-copy-right{
+padding-top: 50px;
+font-weight: bold;
+letter-spacing: 3px;
+}
+/* aqui empieza el estilo  de la foto */ 
+
+
+
+
+ }
+
+
+
+
+
+
+
+
+
+
